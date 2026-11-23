@@ -33,7 +33,7 @@ public abstract class Service {
         return (HospitalInformation.getHourCount() - startedHour) >= getActionDuration();
     }
 
-    public String getStatus() {
-        return actionDone() ? "Inactive" : "Active";
+    public String describe() {
+        return getServiceName() + ": " + (actionDone() ? "Inactive" : "Active");
     }
 }
